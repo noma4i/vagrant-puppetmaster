@@ -27,8 +27,7 @@ Vagrant.configure("2") do |config|
       
       master_config.vm.provision :shell, :path => "puppet_master.sh"
 
-    master_config.vm.synced_folder "puppet/manifests", "/etc/puppet/manifests"
-    master_config.vm.synced_folder "puppet/modules", "/etc/puppet/modules"
+    master_config.vm.synced_folder "puppet", "/etc/puppet"
   end
   
   
